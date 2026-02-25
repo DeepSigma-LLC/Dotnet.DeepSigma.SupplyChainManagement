@@ -4,8 +4,9 @@ namespace DeepSigma.SupplyChainManagement.Enums;
 public enum ProcessAnalysisComponent
 {
     /// <summary>
-    /// Time taken to complete an activity, including processing time, waiting time, and any other time-related factors that contribute to the overall duration of a process. This component is crucial for identifying bottlenecks and optimizing workflow efficiency.
-    /// Also known as "Process Time" or "Cycle Time," it encompasses the total time from the start to the completion of a process, including both value-added and non-value-added activities. Understanding Activity Time is essential for improving process performance and reducing lead times in supply chain management.
+    /// Time taken to complete an activity, including processing time, waiting time, and any other time-related factors that contribute to the overall duration of a process. 
+    /// This component is crucial for identifying bottlenecks and optimizing workflow efficiency.
+    /// Also known as "Process Time", "Service Time," it encompasses the total time from the start to the completion of a process, including both value-added and non-value-added activities. 
     /// </summary>
     ActivityTime,
     /// <summary>
@@ -18,7 +19,6 @@ public enum ProcessAnalysisComponent
     /// Aka "Buffer" or "Stock," it represents the quantity of items that are available to meet demand or support production at any given time.
     /// It can include raw materials, work-in-progress items, and finished goods. Inventory is a critical component for ensuring that production and operations can continue smoothly without interruptions due to shortages. 
     /// However, excessive inventory can lead to increased holding costs and inefficiencies, while insufficient inventory can result in stockouts and lost sales. 
-    /// Managing inventory effectively is essential for optimizing supply chain performance and meeting customer demand.
     /// </summary>
     Inventory,
     /// <summary>
@@ -61,5 +61,20 @@ public enum ProcessAnalysisComponent
     /// Workload refers to the amount of work or demand placed on a process or resource within a given time period. 
     /// It is often measured in terms of the number of tasks, units, or activities that need to be completed.
     /// </summary>
-    Workload
+    Workload,
+    /// <summary>
+    /// Line Balancing is the process of optimizing the allocation of tasks and resources across different stages of a production line or workflow to achieve a balanced and efficient flow of work.
+    /// </summary>
+    LineBalancing,
+    /// <summary>
+    /// Cycle Time refers to the time between two flow units.
+    /// </summary>
+    CycleTime,
+    /// <summary>
+    /// Average Labor Utilization refers to the average percentage of time that labor resources are actively engaged in productive work within a process or supply chain.
+    /// </summary>
+    AverageLaborUtiltization,
+    SpanOfControl,
+    WorkCell,
+    SlackTime,
 }

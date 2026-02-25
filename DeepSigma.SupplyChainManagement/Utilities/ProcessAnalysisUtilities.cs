@@ -1,8 +1,10 @@
 ﻿
 
+using System.ComponentModel.Design;
+
 namespace DeepSigma.SupplyChainManagement.Utilities;
 
-internal class Utilities
+internal class ProcessAnalysisUtilities
 {
     public decimal ComputeInventory(decimal cumulative_inflow, decimal cumulative_outflow) => cumulative_inflow - cumulative_outflow;
 
@@ -39,4 +41,7 @@ internal class Utilities
 
     public decimal ComputeImpliedUtilization(decimal demand, decimal flow_rate) => flow_rate == 0 ? decimal.MaxValue : demand / flow_rate; // Avoid division by zero, implies infinite implied utilization
 
+    public decimal ComputeDirectLaborCost(decimal total_wages_per_unit_time, decimal flow_rate) => flow_rate == 0 ? decimal.MaxValue : total_wages_per_unit_time / flow_rate;
+
+    public decimal ComputeAverageLaborUtiltization(decimal labor_content, decimal flow_rate, decimal number_of_workers) => number_of_workers == 0 ? 0 : (labor_content * flow_rate) / number_of_workers; // Avoid division by zero, implies no labor utilization
 }
