@@ -1,5 +1,6 @@
 ﻿
 
+using DeepSigma.SupplyChainManagement.Enums;
 using System.ComponentModel.Design;
 
 namespace DeepSigma.SupplyChainManagement.Utilities;
@@ -44,4 +45,22 @@ internal class ProcessAnalysisUtilities
     public decimal ComputeDirectLaborCost(decimal total_wages_per_unit_time, decimal flow_rate) => flow_rate == 0 ? decimal.MaxValue : total_wages_per_unit_time / flow_rate;
 
     public decimal ComputeAverageLaborUtiltization(decimal labor_content, decimal flow_rate, decimal number_of_workers) => number_of_workers == 0 ? 0 : (labor_content * flow_rate) / number_of_workers; // Avoid division by zero, implies no labor utilization
+
+    public decimal ComputeCapacityGivenBatchSize(decimal batch_size, decimal setup_time, decimal processing_time) => ((setup_time + batch_size * processing_time) == 0) ? decimal.MaxValue : batch_size / (setup_time + batch_size * processing_time);
+
+    public bool IncreaseBatchSize(ProcessConstraintType bottleneck_constraint)
+    {
+        // If not demand constrained, we are supply constrained at the bottleneck.
+        // Therefore, we should increase the batch size to increase throughput sice we can squeeze out excess capacity at the bottleneck but increasing supply of flow units with large batches.
+        return bottleneck_constraint == ProcessConstraintType.DemandConstraint ? false : true; 
+    }
+
+
+    /// <summary>
+    /// The coefficient of variation is a measure of relative variability that is calculated as the ratio of the standard deviation to the mean.
+    /// </summary>
+    /// <param name="standard_deviation">The standard deviation of the data set.</param>
+    /// <param name="mean">The mean of the data set.</param>
+    /// <returns>The coefficient of variation.</returns>
+    public decimal ComputeCoefficientOfVariation(decimal standard_deviation, decimal mean) => mean == 0 ? decimal.MaxValue : standard_deviation / mean; // Avoid division by zero, implies infinite coefficient of variation
 }

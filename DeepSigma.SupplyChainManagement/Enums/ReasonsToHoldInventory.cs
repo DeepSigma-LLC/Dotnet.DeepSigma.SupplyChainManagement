@@ -7,7 +7,7 @@ namespace DeepSigma.SupplyChainManagement.Enums;
 /// </summary>
 /// <remarks> This comes from De Groote (1994).
 /// </remarks>
-public enum FiveReasonsToHoldInventory
+public enum ReasonsToHoldInventory
 {
     /// <summary>
     /// Pipeline Inventory, also known as "In-Transit Inventory," refers to the stock that is currently being transported between different locations in the supply chain, such as from a supplier to a manufacturer or from a manufacturer to a retailer. 

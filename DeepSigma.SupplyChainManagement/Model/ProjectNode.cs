@@ -1,5 +1,4 @@
-﻿
-namespace DeepSigma.SupplyChainManagement;
+﻿namespace DeepSigma.SupplyChainManagement.Model;
 
 public class ProjectNode
 {
