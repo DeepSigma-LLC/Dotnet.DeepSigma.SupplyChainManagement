@@ -154,5 +154,132 @@ public enum Terminology
     /// Similar to the concept of "shared resources" or "cross-functional resource allocation," horizontal pooling allows for greater flexibility and responsiveness in managing fluctuations in demand and capacity across different parts of the supply chain.
     /// Similar to the concept of work cell, horizontal pooling can help to balance workloads and reduce bottlenecks by allowing resources to be allocated dynamically based on demand and capacity needs across the entire system.
     /// </summary>
-    HorizontalPooling
+    HorizontalPooling,
+    /// <summary>
+    /// Lean operations is a systematic approach to identifying and eliminating waste in a process or supply chain, with the goal of improving efficiency, reducing costs, and enhancing customer value.
+    /// It originated from the Toyota Production System (TPS) and has been widely adopted across various industries as a methodology for optimizing operations and achieving continuous improvement.
+    /// Lean operations focuses on streamlining processes, minimizing inventory, reducing lead times, and maximizing value for customers by eliminating non-value-added activities and optimizing the flow of materials and information throughout the supply chain.
+    /// </summary>
+    LeanOperations,
+    /// <summary>
+    /// Just-in-Time (JIT) production is a manufacturing strategy that aims to minimize inventory and reduce waste by producing and delivering products or components only when they are needed in the production process or by customers.
+    /// Flow units are produced or procured just in time to meet demand, which helps to reduce holding costs, improve cash flow, and increase responsiveness to customer needs.
+    /// </summary>
+    JustInTimeProduction,
+    /// <summary>
+    /// Kanban is an inventory control system used in just-in-time (JIT) manufacturing. 
+    /// It was developed by Taiichi Ohno, an industrial engineer at Toyota, and takes its name from the colored cards that track production and order new shipments of parts or materials as they run out. 
+    /// Kanban is a Japanese word that directly translates to "visual card," so the kanban system simply means to use visual cues to prompt the action needed to keep a process flowing.
+    /// The kanban system can be thought of as a signal and response system. When an item is running low at an operational station, there will be a visual cue specifying how much to order from the supply.
+    /// </summary>
+    /// <remarks>
+    /// For example, if a worker is bagging product on a conveyor belt, a kanban may be placed in the stack above the last 10 bags. 
+    /// When the worker gets to the card, he gives the floor runner the card to bring more bags. 
+    /// A station further from the supply room might have the kanban placed at 15 bags and a closer one at five. 
+    /// The flow of bags and the placement of cards are adjusted to make sure no station is left bag-less while the belt is running.
+    /// </remarks>
+    Kanban,
+    /// <summary>
+    /// Kanban board is a visual tool used in project management and lean manufacturing to visualize work, limit work in progress, and optimize the flow of tasks or items through a process.
+    /// It typically consists of columns representing different stages of the workflow (e.g., To Do, In Progress, Done) and cards or sticky notes representing individual tasks or items that move through the columns as they progress through the process.
+    /// </summary>
+    /// <remarks>
+    /// It originated from the kanban system used in just-in-time (JIT) manufacturing where a kanban is a visual signal (usually a physcial card) strategically placed to trigger action at a certain point in the production process, 
+    /// and has been widely adopted in various industries as a method for managing work and improving efficiency.
+    /// </remarks>
+    KanbanBoard,
+    /// <summary>
+    /// Takt Time is a measure of the time it takes to produce one unit of output in a production process, based on the rate of customer demand.
+    /// "Takt" is a German word that translates to "beat" or "rhythm," and it represents the pace at which products need to be produced to meet customer demand.
+    /// Takt Time is calculated by dividing the available production time by the customer demand for a specific period, and it serves as a critical metric for synchronizing production processes and ensuring that they are aligned with customer needs.
+    /// This computation is similar to the concept of demand rate, which is the rate at which customers require products or services.
+    /// </summary>
+    TaktTime,
+    /// <summary>
+    /// MRP (Material Requirements Planning) system is a production planning and inventory control system that helps manufacturers manage their production processes and inventory levels by calculating the materials and components needed to meet production schedules.
+    /// </summary>
+    MRPSystem,
+    /// <summary>
+    /// ERP (Enterprise Resource Planning) system is an integrated software platform used by organizations to manage and automate core business processes, including finance, human resources, supply chain, manufacturing, and other operations.
+    /// </summary>
+    ERPSystem,
+    /// <summary>
+    /// Push system is a production strategy where production is usually initiated based on forecasted demand, and goods are produced and moved through the supply chain according to a predetermined schedule.
+    /// In a push system, flow units are allowed to enter the process independent of the current amount of inventory in process. 
+    /// Push systems can lead to overproduction and excess inventory if forecasts are inaccurate, but they allow for better control over production processes and can be more efficient in certain scenarios where demand is relatively stable.
+    /// </summary>
+    PushSystem,
+    /// <summary>
+    /// Fill-up pull system is a production strategy where production is initiated based on actual demand, and the system is designed to fill up inventory levels to meet that demand.
+    /// The upsteam processes produces goods to replenish what demand has consumed down stream.
+    /// This approach helps to minimize inventory levels and reduce waste, while ensuring that products are available to meet customer demand in a timely manner.
+    /// </summary>
+    FillUpPullSystem,
+    /// <summary>
+    /// Make-to-order pull system is a production strategy where production is initiated only after receiving a customer order, ensuring that products are made to meet specific customer requirements.
+    /// This approach helps to minimize inventory levels and reduce waste, while providing customized products to customers.
+    /// </summary>
+    MakeToOrderPullSystem,
+    /// <summary>
+    /// Poka-yoke is a Japanese term that translates to "mistake-proofing" or "error-proofing." 
+    /// It refers to any mechanism or device that helps to prevent errors or defects in a process by making it impossible for mistakes to occur or by providing immediate feedback when an error is made.
+    /// </summary>
+    PokaYoke,
+    /// <summary>
+    /// Jidoka is a Japanese term that translates to "automation with a human touch" or "autonomation." 
+    /// It refers to the concept of designing equipment and processes to automatically detect and respond to abnormalities or defects, allowing human operators to focus on value-added tasks and ensuring that quality issues are addressed immediately.
+    /// Jidoka is a key principle of the Toyota Production System (TPS) and is often implemented through the use of sensors, alarms, and other mechanisms that can identify problems in real-time and trigger appropriate responses, such as stopping production or alerting operators to take corrective action.
+    /// </summary>
+    Jidoka,
+    /// <summary>
+    /// Andon cord is a version of Jidoka that allows workers to pull a cord or press a button to immediately stop the production line when they identify a problem or defect.
+    /// This empowers workers to take ownership of quality and ensures that issues are addressed promptly, preventing the production of defective products and maintaining high standards of quality throughout the manufacturing process.
+    /// </summary>
+    AndonCord,
+    /// <summary>
+    /// Built-in quality control refers to the practice of designing processes and systems in such a way that quality is built into every stage of production, rather than relying solely on inspection and testing at the end of the process.
+    /// This approach helps to prevent defects, reduce waste, and ensure that products meet quality standards consistently.
+    /// If a problem arises during production, waiting until the end of the process to identify and address it can lead to significant waste and inefficiencies since the defect may be present in the entire batch of products (every flow unit in the WIP). 
+    /// By incorporating built-in quality control measures, such as error-proofing (poka-yoke) and real-time monitoring (jidoka), manufacturers can identify and address issues immediately, preventing the production of defective products and maintaining high standards of quality throughout the manufacturing process.
+    /// </summary>
+    BuiltInQualityControl,
+    /// <summary>
+    /// Information turnaround time refers to the time it takes for information to be processed, transmitted, and received within a system or supply chain.
+    /// Often used in the context of quality control and decision-making processes, information turnaround time indicates how quickly information can be gathered, analyzed, and acted upon to address issues or make informed decisions.
+    /// For example, the time between creating a defect and receiving the feedback about the defect.
+    /// Large buffer sizes can lead to longer information turnaround times, as it may take more time for information on each flow unit in the WIP to be processed and transmitted through the system.
+    /// </summary>
+    InformationTurnaroundTime,
+    /// <summary>
+    /// Inventory reduction technique refers to strategies and methods used to minimize inventory levels while maintaining efficient operations and meeting customer demand.
+    /// This can include techniques such as just-in-time (JIT) production, kanban systems, demand forecasting, and supply chain optimization to reduce excess inventory, minimize holding costs, and improve overall efficiency in the supply chain.
+    /// Reducing inventory can help to free up capital, reduce storage costs, and improve cash flow, but it requires careful planning and coordination to ensure that customer demand is still met without causing stockouts or disruptions in the production process.
+    /// </summary>
+    /// <remarks>
+    /// The use of the kanban system, for example, is a common inventory reduction technique that helps to control the flow of materials and products through the supply chain, ensuring that inventory levels are kept at optimal levels based on actual demand.
+    /// The kanban system enables managers to systematically reduce inventory levels when needed, thus identifying bottlenecks and processing inefficiencies that may be hidden by large inventory levels.
+    /// Those bottlenecks and inefficiencies can be addressed to improve flow rate and reduce lead times, ultimately leading to a more efficient and responsive supply chain. 
+    /// Then the kanban system can be used again to further reduce inventory levels, creating a continuous cycle of improvement and optimization in the supply chain.
+    /// This system enables managers to choose when the exact time to focus on process improvement. 
+    /// Perhaps when demands slows down, or when the company is looking to cut costs, or when the company is looking to improve cash flow.
+    /// </remarks>
+    InventoryReductionTechnique,
+    /// <summary>
+    /// Shared resource refers to a resource, such as labor, equipment, or inventory, that is utilized across multiple processes or stages within a supply chain or production system.
+    /// </summary>
+    SharedResource,
+    /// <summary>
+    /// Chaining (or partial flexibility) in supply chain management links production facilities to specific subsets of products, allowing plants to handle overflow from others. 
+    /// This cost-effective strategy provides 80–90% of the benefits of full flexibility by reducing inventory costs and managing demand uncertainty without the high expense of making every plant capable of producing all products.
+    /// </summary>
+    PartialFlexibility,
+    /// <summary>
+    /// Quality Circle is a group of workers who meet regularly to discuss and solve problems related to quality and productivity in their work area.
+    /// </summary>
+    QualityCircle,
+    /// <summary>
+    /// Ishikawa diagram, also known as a fishbone diagram or cause-and-effect diagram, is a visual tool used to systematically identify and analyze the potential causes of a specific problem or effect.
+    /// It is commonly used in quality management and process improvement to help teams brainstorm and categorize the various factors that may contribute to a problem, allowing for a structured approach to problem-solving and root cause analysis.
+    /// </summary>
+    IshikawaDiagram
 }
