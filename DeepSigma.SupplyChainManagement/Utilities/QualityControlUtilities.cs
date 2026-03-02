@@ -66,6 +66,44 @@ public static class QualityControlUtilities
     }
 
     /// <summary>
+    /// Calculates the upper control limit for a process based on the specified mean, standard deviation, and control
+    /// limit multiplier.
+    /// </summary>
+    /// <remarks>This method is commonly used in statistical process control to establish a threshold for
+    /// detecting significant deviations in process behavior.</remarks>
+    /// <param name="process_mean">The mean value of the process, representing the central tendency of the process data.</param>
+    /// <param name="process_standard_deviation">The standard deviation of the process, indicating the amount of variation or dispersion in the process data.</param>
+    /// <param name="control_limit_multiplier">The number of standard deviations to add to the mean to determine the upper control limit. Defaults to 3.</param>
+    /// <returns>The upper control limit as a decimal value, calculated by adding the product of the control limit multiplier and
+    /// the standard deviation to the process mean.</returns>
+    public static decimal UpperControlLimit(decimal process_mean, decimal process_standard_deviation, decimal control_limit_multiplier = 3) => process_mean + control_limit_multiplier * process_standard_deviation;
+    
+    /// <summary>
+    /// Calculates the lower control limit for a process based on the specified mean, standard deviation, and control
+    /// limit multiplier.
+    /// </summary>
+    /// <remarks>This method is commonly used in statistical process control to establish the threshold below
+    /// which process values are considered unusually low. The default multiplier of 3 corresponds to the typical
+    /// three-sigma control limit.</remarks>
+    /// <param name="process_mean">The mean value of the process, representing the central tendency of the process data.</param>
+    /// <param name="process_standard_deviation">The standard deviation of the process, indicating the amount of variation or dispersion in the process data.</param>
+    /// <param name="control_limit_multiplier">The number of standard deviations to subtract from the mean to determine the lower control limit. Defaults to 3.</param>
+    /// <returns>The calculated lower control limit as a decimal value.</returns>
+    public static decimal LowerControlLimit(decimal process_mean, decimal process_standard_deviation, decimal control_limit_multiplier = 3) => process_mean - control_limit_multiplier * process_standard_deviation;
+
+    /// <summary>
+    /// Calculates the probability that an event with a specified probability occurs independently a given number of
+    /// times.
+    /// </summary>
+    /// <remarks>This method assumes that each occurrence of the event is independent and that the probability
+    /// remains constant across all occurrences.</remarks>
+    /// <param name="probability_event">The probability of a single occurrence of the event, expressed as a decimal value between 0 and 1.</param>
+    /// <param name="number_of_occurance">The number of independent occurrences to consider. Must be non-negative.</param>
+    /// <returns>The probability that the event occurs in all specified independent occurrences, as a decimal value between 0 and
+    /// 1.</returns>
+    public static decimal ProbabilityOfMultipleIndependentOccurance(decimal probability_event, double number_of_occurance) => (decimal)Math.Pow((double)probability_event,number_of_occurance);
+
+    /// <summary>
     /// CumulativeNormDist calculates the cumulative distribution function (CDF) for a normal distribution with a given mean and standard deviation at a specific observation point.
     /// </summary>
     /// <param name="observation"></param>
@@ -79,5 +117,11 @@ public static class QualityControlUtilities
         // Implementation of the standard normal distribution function (CDF)
     }
 
-
+    /// <summary>
+    /// Standard Error calculates the standard error of an estimate based on the estimate value and the sample size.
+    /// </summary>
+    /// <param name="estimate">The estimate value for which the standard error is being calculated.</param>
+    /// <param name="sample_size">The size of the sample used to calculate the estimate.</param>
+    /// <returns>The calculated standard error for the given estimate and sample size.</returns>
+    private static decimal StandardError(decimal estimate, double sample_size) =>  estimate / (decimal)Math.Sqrt(sample_size);
 }
