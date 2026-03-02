@@ -281,5 +281,67 @@ public enum Terminology
     /// Ishikawa diagram, also known as a fishbone diagram or cause-and-effect diagram, is a visual tool used to systematically identify and analyze the potential causes of a specific problem or effect.
     /// It is commonly used in quality management and process improvement to help teams brainstorm and categorize the various factors that may contribute to a problem, allowing for a structured approach to problem-solving and root cause analysis.
     /// </summary>
-    IshikawaDiagram
+    IshikawaDiagram,
+    /// <summary>
+    /// Statistic Process Control (SPC) is a method of quality control that uses statistical techniques to monitor and control a process, ensuring that it operates at its full potential to produce conforming products with minimal waste.
+    /// SPC involves collecting and analyzing data from the production process to identify variations and trends, allowing for early detection of potential issues and enabling proactive measures to maintain process stability and improve quality.
+    /// </summary>
+    StatisticProcessControl,
+    /// <summary>
+    /// Upper Specification Limit (USL) is the maximum acceptable value for a process or product characteristic.
+    /// Often used in Capability Analysis, it represents the upper threshold that defines the acceptable range of variation for a specific characteristic or parameter in a process or product.
+    /// </summary>
+    UpperSpecificationLimit,
+    /// <summary>
+    /// Lower Specification Limit (LSL) is the minimum acceptable value for a process or product characteristic.
+    /// Often used in Capability Analysis, it represents the lower threshold that defines the acceptable range of variation for a specific characteristic or parameter in a process or product.
+    /// </summary>
+    LowerSpecificationLimit,
+    /// <summary>
+    /// Defect Probability is the likelihood of a defect occurring in a process or product.
+    /// </summary>
+    DefectProbability,
+    /// <summary>
+    /// Process Capability Index (Cpk) is a statistical measure of a process's ability to produce output within specified limits.
+    /// It considers both the process mean (or specification limits) and variability, providing a more comprehensive assessment of process performance compared to Cp.
+    /// </summary>
+    ProcessCapabilityIndex,
+    /// <summary>
+    /// Six Sigma is a set of techniques and tools for process improvement, aiming to reduce defects and variability in processes.
+    /// </summary>
+    SixSigma,
+    /// <summary>
+    /// Parts Per Million (PPM) is a common unit of measurement used to express the number of defective units in a million units produced.
+    /// Since quality control often wants very low defect rates, PPM is a more practical way to express the level of defects in a process, especially when dealing with high-quality processes where the defect rate is very low.
+    /// </summary>
+    PartsPerMillion,
+    /// <summary>
+    /// Capability Analysis is a statistical method used to assess how well a process can produce output that meets specifications.
+    /// It involves evaluating the process performance against predefined criteria to determine its ability to consistently produce products within the desired specifications.
+    /// </summary>
+    CapabilityAnalysis,
+    /// <summary>
+    /// Capability Index is a numerical measure of a process's ability to produce output within specified limits.
+    /// </summary>
+    CapabilityIndex,
+    /// <summary>
+    /// Conformity Analysis is a method used to determine whether a product or process meets specified standards or requirements.
+    /// It involves comparing the characteristics of the product or process against predefined criteria to assess whether it conforms to the desired specifications, ensuring that quality standards are met and maintained throughout production.
+    /// </summary>
+    ConformityAnalysis,
+    /// <summary>
+    /// Control Chart is a graphical tool used to monitor and control a process by plotting data points over time and identifying any variations or trends that may indicate a problem.
+    /// It helps in distinguishing between common cause variation (inherent to the process) and special cause variation (due to specific factors), enabling timely corrective actions.
+    /// </summary>
+    ControlChart,
+    /// <summary>
+    /// Upper Control Limit (UCL) is the upper threshold on a control chart that indicates the maximum acceptable level of variation in a process before it is considered out of control.
+    /// Typically used in Conformity Analysis, it helps to identify when a process is producing output that exceeds the expected range of variation, signaling the need for investigation and corrective action to maintain process stability and quality.
+    /// </summary>
+    UpperControlLimit,
+    /// <summary>
+    /// Lower Control Limit (LCL) is the lower threshold on a control chart that indicates the minimum acceptable level of variation in a process before it is considered out of control.
+    /// Typically used in Conformity Analysis, it helps to identify when a process is producing output that falls below the expected range of variation, signaling the need for investigation and corrective action to maintain process stability and quality.
+    /// </summary>
+    LowerControlLimit,
 }

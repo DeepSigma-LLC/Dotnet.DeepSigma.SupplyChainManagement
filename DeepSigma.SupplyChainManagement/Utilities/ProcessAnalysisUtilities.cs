@@ -63,4 +63,6 @@ internal class ProcessAnalysisUtilities
     /// <param name="mean">The mean of the data set.</param>
     /// <returns>The coefficient of variation.</returns>
     public decimal ComputeCoefficientOfVariation(decimal standard_deviation, decimal mean) => mean == 0 ? decimal.MaxValue : standard_deviation / mean; // Avoid division by zero, implies infinite coefficient of variation
+
+ 
 }
