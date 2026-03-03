@@ -94,6 +94,8 @@ public static class QualityControlUtilities
     /// <summary>
     /// Calculates the probability that an event with a specified probability occurs independently a given number of
     /// times.
+    /// For example, if you have a random process the probability of ending up on one side of the mean should be 0.5, and the probability of ending up on the other side of the mean should also be 0.5. 
+    /// If you want to know the probability of ending up on the same side of the mean 3 times in a row, you would calculate 0.5^3 = 0.125, which means there is a 12.5% chance of that happening.
     /// </summary>
     /// <remarks>This method assumes that each occurrence of the event is independent and that the probability
     /// remains constant across all occurrences.</remarks>
@@ -102,6 +104,30 @@ public static class QualityControlUtilities
     /// <returns>The probability that the event occurs in all specified independent occurrences, as a decimal value between 0 and
     /// 1.</returns>
     public static decimal ProbabilityOfMultipleIndependentOccurance(decimal probability_event, double number_of_occurance) => (decimal)Math.Pow((double)probability_event,number_of_occurance);
+
+    /// <summary>
+    /// Calculates the yield of non-defective resources as a decimal ratio of total resources produced.
+    /// </summary>
+    /// <param name="total_resources_produced">The total number of resources produced. Must be greater than zero to avoid division by zero.</param>
+    /// <param name="defective_resources_produced">The number of resources classified as defective. Cannot be negative and should not exceed the total resources
+    /// produced.</param>
+    /// <returns>A decimal value representing the proportion of non-defective resources to total resources produced. Returns 0 if
+    /// all resources are defective, and 1 if there are no defective resources.</returns>
+    public static decimal ResourceYield(decimal total_resources_produced, decimal defective_resources_produced) => (total_resources_produced - defective_resources_produced) / total_resources_produced;
+
+
+    /// <summary>
+    /// Calculates the number of flow units required to achieve a specified target yield, based on the process yield.
+    /// </summary>
+    /// <remarks>If <paramref name="process_yield"/> is zero, the method will throw a division by zero
+    /// exception. Ensure that <paramref name="process_yield"/> is greater than zero before calling this
+    /// method.</remarks>
+    /// <param name="target_flow_units">The total number of flow units that must meet the target criteria.</param>
+    /// <param name="process_yield">The yield of the process, expressed as a decimal value between 0 and 1, representing the proportion of flow
+    /// units that successfully meet the target criteria. Must not be zero.</param>
+    /// <returns>A decimal value representing the number of flow units that need to be processed to achieve the specified target
+    /// yield.</returns>
+    public static decimal ComputeNeededFlowUnitsToAchieveTargetYield(decimal target_flow_units, decimal process_yield) => target_flow_units / process_yield;
 
     /// <summary>
     /// CumulativeNormDist calculates the cumulative distribution function (CDF) for a normal distribution with a given mean and standard deviation at a specific observation point.
@@ -124,4 +150,13 @@ public static class QualityControlUtilities
     /// <param name="sample_size">The size of the sample used to calculate the estimate.</param>
     /// <returns>The calculated standard error for the given estimate and sample size.</returns>
     private static decimal StandardError(decimal estimate, double sample_size) =>  estimate / (decimal)Math.Sqrt(sample_size);
+
+    /// <summary>
+    /// EstimateStandardDeviationFromRange provides an estimate of the standard deviation of a process based on the range defined by the upper and lower limits.
+    /// This is not mathematically rigorous, but can be a useful heuristic when you have limited data and want to get a rough sense of the variability in the process.
+    /// </summary>
+    /// <param name="upper_limit">The upper limit of the range.</param>
+    /// <param name="lower_limit">The lower limit of the range.</param>
+    /// <returns>The estimated standard deviation based on the range.</returns>
+    private static decimal EstimateStandardDeviationFromRange(decimal upper_limit, decimal lower_limit) => (upper_limit - lower_limit) / 4;
 }

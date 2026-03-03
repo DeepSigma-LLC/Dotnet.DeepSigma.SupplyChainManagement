@@ -283,6 +283,24 @@ public enum Terminology
     /// </summary>
     IshikawaDiagram,
     /// <summary>
+    /// Five whys is a problem-solving technique used to explore the cause-and-effect relationships underlying a particular problem or issue.
+    /// By repeatedly asking the question "Why?" (typically five times), the technique helps to drill down into the root cause of a problem, allowing teams to identify and address the underlying issues rather than just treating the symptoms.
+    /// This method is often used in quality management and process improvement to facilitate deeper analysis and more effective problem-solving, ultimately leading to more sustainable solutions.
+    /// </summary>
+    FiveWhys,
+    /// <summary>
+    /// Pareto diagram, also known as a Pareto chart, is a graphical tool used to prioritize and analyze the relative importance of different factors or causes contributing to a problem or effect.
+    /// Pareto diagrams are based on the Pareto principle, which states that roughly 80% of the effects come from 20% of the causes.
+    /// It is commonly used in quality management and process improvement to prioritize actions and focus on the most impactful issues.
+    /// By charting the frequency or impact of different factors, Pareto Analysis helps teams to identify the "vital few" causes that contribute the most to a problem, allowing for more targeted and effective interventions to improve quality and performance.
+    /// </summary>
+    ParetoDiagram,
+    /// <summary>
+    /// The Pareto principle, also known as the 80/20 rule, is a principle that states that roughly 80% of the effects come from 20% of the causes.
+    /// In the context of quality management and process improvement, the Pareto principle suggests that a small number of causes or factors are responsible for the majority of problems or effects in a process or system.
+    /// </summary>
+    ParetoPrinciple,
+    /// <summary>
     /// Statistic Process Control (SPC) is a method of quality control that uses statistical techniques to monitor and control a process, ensuring that it operates at its full potential to produce conforming products with minimal waste.
     /// SPC involves collecting and analyzing data from the production process to identify variations and trends, allowing for early detection of potential issues and enabling proactive measures to maintain process stability and improve quality.
     /// </summary>
@@ -344,4 +362,48 @@ public enum Terminology
     /// Typically used in Conformity Analysis, it helps to identify when a process is producing output that falls below the expected range of variation, signaling the need for investigation and corrective action to maintain process stability and quality.
     /// </summary>
     LowerControlLimit,
+    /// <summary>
+    /// p-chart is a type of control chart used to monitor the proportion of defective items in a process over time.
+    /// It is commonly used in quality control to track the percentage of non-conforming units in a sample, allowing for the identification of trends and variations in the defect rate, and enabling timely interventions to improve process performance and maintain quality standards.
+    /// It is similar to the concept of a control chart, but specifically designed for tracking proportions or percentages of defects in a process, making it a valuable tool for monitoring and improving quality in manufacturing and other industries.
+    /// Our center of attention is on the proportion (aka percentage) of defective items in a process, hence the "p" in "p-chart."
+    /// The UCL and LCL in a p-chart are calculated based on the average proportion of defects and the sample size, allowing for the identification of significant deviations from the expected defect rate and facilitating proactive quality management.
+    /// </summary>
+    PChart,
+    /// <summary>
+    /// Defect refers to a flaw, imperfection, or non-conformity in a product, process, or system that deviates from specified requirements or standards.
+    /// </summary>
+    Defect,
+    /// <summary>
+    /// Rework refers to the process of correcting or fixing a defect in a product, process, or system to bring it back into compliance with specified requirements or standards.
+    /// </summary>
+    Rework,
+    /// <summary>
+    /// Resource yield refers to the amount of usable output or value that can be obtained from a given resource, such as labor, materials, or equipment, in a production process or supply chain.
+    /// It is a measure of the efficiency and effectiveness of resource utilization, indicating how much value or output can be generated from the resources invested in a process.
+    /// For example, if a machine has a resource yield of 80%, it means that 80% of the input materials or labor invested in that machine results in usable output, while the remaining 20% may be lost due to inefficiencies, defects, or other factors.
+    /// </summary>
+    ResourceYield,
+    /// <summary>
+    /// Quality at the source refers to the practice of ensuring that quality is built into every stage of the production process, starting from the initial stages of design and development, through manufacturing and assembly, and all the way to the final product.
+    /// This approach emphasizes the importance of preventing defects and ensuring quality at every step of the process, rather than relying solely on inspection and testing at the end of the production line.
+    /// This concept is closely related to the idea of built-in quality control, where processes and systems are designed to prevent errors and defects from occurring in the first place, rather than just identifying and addressing them after they have occurred.
+    /// Finding defects at the source allows for immediate corrective action, preventing the production of defective products and maintaining high standards of quality throughout the manufacturing process.
+    /// It is also usually easy to spot and fix defects at the source, since the process is still fresh in the minds of workers and managers, and the necessary resources and information are readily available to address any issues that arise.
+    /// </summary>
+    QualityAtTheSource,
+
+
+    /// <summary>
+    /// Customer Value Curve is a visual representation of the different factors that customers consider when making purchasing decisions and how a company can differentiate itself from competitors by offering unique value in those areas.
+    /// </summary>
+    CustomerValueCurve,
+    /// <summary>
+    /// Demand aggregation refers to the process of combining customer demand from multiple sources or locations to achieve economies of scale, reduce costs, and improve efficiency in production and distribution.
+    /// </summary>
+    DemandAggregation,
+    /// <summary>
+    /// Statistical economies of scale refer to the idea the variability in demand can be reduced by aggregating demand across multiple customers, products, or locations, leading to more efficient production and distribution processes.
+    /// </summary>
+    StatisticalEconomiesOfScale,
 }
