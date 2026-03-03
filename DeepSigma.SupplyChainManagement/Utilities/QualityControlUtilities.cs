@@ -40,9 +40,9 @@ public static class QualityControlUtilities
     {
         if (process_standard_deviation == 0) return decimal.MaxValue; // Avoid division by zero, implies infinite capability
 
-        decimal probability_below_lower = CumulativeNormDist(lower_specification_limit, process_mean, process_standard_deviation);
+        decimal probability_below_lower = StatisticalUtilities.CumulativeNormDist(lower_specification_limit, process_mean, process_standard_deviation);
         // 1 - CDF gives us the right tail probability, which is the probability of being above the upper specification limit
-        decimal probability_above_upper = 1 - CumulativeNormDist(upper_specification_limit, process_mean, process_standard_deviation); 
+        decimal probability_above_upper = 1 - StatisticalUtilities.CumulativeNormDist(upper_specification_limit, process_mean, process_standard_deviation); 
 
         return (probability_above_upper + probability_below_lower);
     }
@@ -115,7 +115,6 @@ public static class QualityControlUtilities
     /// all resources are defective, and 1 if there are no defective resources.</returns>
     public static decimal ResourceYield(decimal total_resources_produced, decimal defective_resources_produced) => (total_resources_produced - defective_resources_produced) / total_resources_produced;
 
-
     /// <summary>
     /// Calculates the number of flow units required to achieve a specified target yield, based on the process yield.
     /// </summary>
@@ -128,35 +127,4 @@ public static class QualityControlUtilities
     /// <returns>A decimal value representing the number of flow units that need to be processed to achieve the specified target
     /// yield.</returns>
     public static decimal ComputeNeededFlowUnitsToAchieveTargetYield(decimal target_flow_units, decimal process_yield) => target_flow_units / process_yield;
-
-    /// <summary>
-    /// CumulativeNormDist calculates the cumulative distribution function (CDF) for a normal distribution with a given mean and standard deviation at a specific observation point.
-    /// </summary>
-    /// <param name="observation"></param>
-    /// <param name="mean"></param>
-    /// <param name="std"></param>
-    /// <returns></returns>
-    /// <exception cref="NotImplementedException"></exception>
-    private static decimal CumulativeNormDist(decimal observation, decimal mean, decimal std)
-    {
-        throw new NotImplementedException();
-        // Implementation of the standard normal distribution function (CDF)
-    }
-
-    /// <summary>
-    /// Standard Error calculates the standard error of an estimate based on the estimate value and the sample size.
-    /// </summary>
-    /// <param name="estimate">The estimate value for which the standard error is being calculated.</param>
-    /// <param name="sample_size">The size of the sample used to calculate the estimate.</param>
-    /// <returns>The calculated standard error for the given estimate and sample size.</returns>
-    private static decimal StandardError(decimal estimate, double sample_size) =>  estimate / (decimal)Math.Sqrt(sample_size);
-
-    /// <summary>
-    /// EstimateStandardDeviationFromRange provides an estimate of the standard deviation of a process based on the range defined by the upper and lower limits.
-    /// This is not mathematically rigorous, but can be a useful heuristic when you have limited data and want to get a rough sense of the variability in the process.
-    /// </summary>
-    /// <param name="upper_limit">The upper limit of the range.</param>
-    /// <param name="lower_limit">The lower limit of the range.</param>
-    /// <returns>The estimated standard deviation based on the range.</returns>
-    private static decimal EstimateStandardDeviationFromRange(decimal upper_limit, decimal lower_limit) => (upper_limit - lower_limit) / 4;
 }

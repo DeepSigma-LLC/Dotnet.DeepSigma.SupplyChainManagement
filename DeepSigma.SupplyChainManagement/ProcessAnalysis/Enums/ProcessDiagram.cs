@@ -1,6 +1,4 @@
-﻿
-
-namespace DeepSigma.SupplyChainManagement.Enums;
+﻿namespace DeepSigma.SupplyChainManagement.ProcessAnalysis.Enums;
 
 /// <summary>
 /// ProcessDiagram specifies the types of diagrams used to visually represent and analyze processes, workflows, and dependencies within a system or project.

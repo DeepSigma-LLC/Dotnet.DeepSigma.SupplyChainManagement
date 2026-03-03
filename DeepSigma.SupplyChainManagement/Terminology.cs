@@ -1,5 +1,4 @@
-﻿
-namespace DeepSigma.SupplyChainManagement.Enums;
+﻿namespace DeepSigma.SupplyChainManagement;
 
 public enum Terminology
 {
