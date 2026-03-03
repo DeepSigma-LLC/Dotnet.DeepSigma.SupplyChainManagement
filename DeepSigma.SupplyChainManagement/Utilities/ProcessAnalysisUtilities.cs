@@ -1,6 +1,4 @@
-﻿
-
-using DeepSigma.SupplyChainManagement.Enums;
+﻿using DeepSigma.SupplyChainManagement.ProcessAnalysis.Enums;
 using System.ComponentModel.Design;
 
 namespace DeepSigma.SupplyChainManagement.Utilities;
