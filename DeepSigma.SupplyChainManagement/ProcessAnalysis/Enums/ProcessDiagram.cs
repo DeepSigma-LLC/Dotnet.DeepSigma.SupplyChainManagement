@@ -53,5 +53,10 @@ public enum ProcessDiagram
     /// Customer Value Curve is a visual representation that illustrates the relationship between the value provided to customers and the cost of delivering that value.
     /// It helps organizations understand how their products or services create value for customers and identify opportunities for improvement or differentiation.
     /// </summary>
-    CustomerValueCurve
+    CustomerValueCurve,
+    /// <summary>
+    /// Return on Invested Capital (ROIC) Tree is a visual representation that breaks down the components of ROIC, such as net operating profit after tax (NOPAT) and invested capital, to analyze the drivers of return on invested capital and identify areas for improvement in financial performance.
+    /// ROIC Tree helps businesses understand how different factors contribute to their overall return on invested capital and make informed decisions to optimize their financial performance and create value for shareholders.
+    /// </summary>
+    ReturnOnInvestedCapitalTree
 }

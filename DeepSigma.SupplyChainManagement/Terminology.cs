@@ -410,4 +410,59 @@ public enum Terminology
     /// Statistical economies of scale refer to the idea the variability in demand can be reduced by aggregating demand across multiple customers, products, or locations, leading to more efficient production and distribution processes.
     /// </summary>
     StatisticalEconomiesOfScale,
+    /// <summary>
+    /// DuPont Model is a financial analysis framework that breaks down return on equity (ROE) into its component parts, allowing for a more detailed understanding of the factors that contribute to a company's profitability and financial performance.
+    /// The DuPont Model typically decomposes ROE into three main components: profit margin, asset turnover, and financial leverage. 
+    /// By analyzing these components separately, businesses can identify areas of strength and weakness in their operations and make informed decisions to improve overall performance and create value for shareholders.
+    /// </summary>
+    DuPontModel,
+    /// <summary>
+    /// Revenue management refers to the strategic approach of optimizing a company's revenue by analyzing and managing various factors that influence pricing, demand, and customer behavior.
+    /// Also, known as yield management, it involves using data and analytics to make informed decisions about pricing, inventory management, and customer segmentation to maximize revenue and profitability.
+    /// </summary>
+    RevenueManagement,
+    /// <summary>
+    /// Overbooking is a common practice in industries such as airlines, hotels, and event management, where companies sell more tickets or reservations than the actual capacity of their services, anticipating that some customers will cancel or not show up.
+    /// While overbooking can help to maximize revenue and reduce the impact of no-shows, it can also lead to customer dissatisfaction and logistical challenges if more customers show up than expected, requiring companies to manage the situation carefully to minimize negative impacts on customer experience and brand reputation.
+    /// </summary>
+    Overbooking,
+    /// <summary>
+    ///  Booking limits in the context of revenue management and overbooking refers to the practice of setting limits on the number of reservations or bookings that can be accepted for a particular service or product, based on factors such as historical demand patterns, customer behavior, and capacity constraints.
+    ///  This ensure that the company reserves enough capacity to accommodate expected demand while minimizing the risk of overbooking and its associated challenges, such as customer dissatisfaction and logistical issues.
+    /// </summary>
+    BookingLimits,
+
+    /// <summary>
+    /// Bullwhip effect refers to the phenomenon where small fluctuations in demand at the consumer level can lead to increasingly larger fluctuations in demand at the wholesale, distributor, manufacturer, and raw material supplier levels in a supply chain.
+    /// This effect can lead to inefficiencies, such as excess inventory, stockouts, and increased costs, as each level of the supply chain reacts to perceived changes in demand without accurate information about actual consumer demand.
+    /// The bullwhip effect is often caused by factors such as demand forecasting errors, order batching, price fluctuations, and lack of communication and coordination among supply chain partners.
+    /// </summary>
+    BullwhipEffect,
+    /// <summary>
+    /// Incentive conflict refers to a situation where the incentives or motivations of different parties in a supply chain or business relationship are not aligned, leading to potential conflicts of interest and suboptimal outcomes for one or more parties involved.
+    /// Conflicts can arise in various contexts, such as between suppliers and manufacturers, between employers and employees, or between different departments within an organization, and can lead to issues such as reduced cooperation, inefficiencies, and decreased overall performance if not properly managed and addressed.
+    /// </summary>
+    IncentiveConflict,
+    /// <summary>
+    /// Incentive alignment refers to the process of designing and implementing incentives, such as compensation structures, performance metrics, and reward systems, in a way that encourages and motivates individuals or groups to work towards common goals and objectives.
+    /// Aligning incentives can help to foster collaboration, improve performance, and achieve better outcomes for all parties involved by ensuring that everyone is working towards the same objectives and is motivated to contribute to the success of the organization or supply chain.
+    /// </summary>
+    IncentiveAlignment,
+    /// <summary>
+    /// Trade promotion refers to marketing activities and incentives offered by manufacturers or suppliers to retailers or distributors to encourage them to promote and sell their products.
+    /// </summary>
+    TradePromotion,
+    /// <summary>
+    /// Forward buying refers to the practice of purchasing larger quantities of products than needed in the short term, often in response to promotions or anticipated price increases.
+    /// </summary>
+    ForwardBuying,
+    /// <summary>
+    /// Channel stuffing refers to the practice of deliberately sending more products to distributors or retailers than they can sell in a given period, often to inflate sales figures or meet sales targets.
+    /// </summary>
+    ChannelStuffing,
+    /// <summary>
+    /// Diversion refers to the unauthorized or unintended redirection of products from their intended distribution channels, often resulting in products being sold in markets or regions where they were not originally intended to be sold.
+    /// This can occur due to various reasons, such as price differences between markets, supply chain disruptions, or intentional actions by intermediaries, and can lead to issues such as brand dilution, loss of revenue, and challenges in managing inventory and demand across different markets.
+    /// </summary>
+    Diversion
 }
