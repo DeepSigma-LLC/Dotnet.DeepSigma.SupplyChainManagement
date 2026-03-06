@@ -464,5 +464,85 @@ public enum Terminology
     /// Diversion refers to the unauthorized or unintended redirection of products from their intended distribution channels, often resulting in products being sold in markets or regions where they were not originally intended to be sold.
     /// This can occur due to various reasons, such as price differences between markets, supply chain disruptions, or intentional actions by intermediaries, and can lead to issues such as brand dilution, loss of revenue, and challenges in managing inventory and demand across different markets.
     /// </summary>
-    Diversion
+    Diversion,
+
+    /// <summary>
+    /// Order inflation refers to the practice of placing larger orders than necessary, often in response to perceived shortages or supply disruptions, which can lead to increased variability and inefficiency in the supply chain.
+    /// Retailers many due this since they only expect to receive a portion of the order they place, so they inflate their orders to ensure they receive enough inventory to meet customer demand.
+    /// AKA shortage gaming, it can occur when supply chain partners react to perceived shortages or supply disruptions by placing larger orders than necessary, which can lead to increased variability in demand and inventory levels throughout the supply chain.
+    /// </summary>
+    OrderInflation,
+    /// <summary>
+    /// On allocation refers to the practice of allocating limited resources or inventory based on perceived demand or supply disruptions, which can lead to increased variability and inefficiency in the supply chain.
+    /// </summary>
+    OnAllocation,
+    /// <summary>
+    /// Phantom order refers to an order that is placed but may be canceled or modified later, leading to increased variability and inefficiency in the supply chain as supply chain partners react to the perceived demand and inventory levels.
+    /// </summary>
+    PhantomOrder,
+
+    /// <summary>
+    /// Collaborative Planning, Forecasting, and Replenishment (CPFR) is a business practice that combines the intelligence of multiple trading partners in the planning and fulfillment of customer demand.
+    /// It involves the sharing of information, such as sales data, inventory levels, and demand forecasts, between manufacturers, suppliers, and retailers to improve the accuracy of demand forecasting and enhance the efficiency of the supply chain.
+    /// Looking at sales data alone is not sufficient to accurately forecast demand, as it does not account for factors such as pricing, advertising, promotions, and other market dynamics that can influence customer behavior and demand patterns.
+    /// </summary>
+    CollaborativePlanningForecastingAndReplenishment,
+    /// <summary>
+    /// Electronic Data Interchange (EDI) is a standardized method for exchanging business documents and information electronically between organizations, such as suppliers, manufacturers, retailers, and other trading partners.
+    /// </summary>
+    ElectronicDataInterchange,
+    /// <summary>
+    /// Distribution network refers to the interconnected system of facilities, transportation routes, and inventory management processes that enable the movement of goods and products from manufacturers to end customers.
+    /// Distribution networks are designed to optimize the flow of products, minimize costs, and ensure timely delivery to customers by strategically locating warehouses, distribution centers, and transportation routes to efficiently manage inventory and meet customer demand across different regions and markets.
+    /// Distributer help to reduce the number of transactions and transportation routes needed to get products from manufacturers to customers, as they can consolidate orders and shipments from multiple manufacturers and distribute them to various retailers or end customers, thus improving efficiency, reducing costs, and improve inventory levels across the supply chain.
+    /// </summary>
+    DistributionNetwork,
+    /// <summary>
+    /// Cancellation policy refers to the rules and guidelines established by a company or organization regarding the cancellation of orders, reservations, or services by customers.
+    /// Cancellation policies typically outline the conditions under which cancellations are allowed, any associated fees or penalties, and the process for requesting a cancellation.
+    /// These can help to reduce the likelihood of cancellations and manage customer expectations, while also providing a framework for handling cancellations in a consistent and fair manner that balances the needs of both the company and its customers.
+    /// </summary>
+    CancellationPolicy,
+    /// <summary>
+    /// Order deposit refers to a payment made by a customer to secure a product or service before it is delivered or provided.
+    /// Order deposits are typically used to reduce the risk of cancellations and ensure commitment from the customer, while also providing the company with funds to cover initial costs or production expenses.
+    /// </summary>
+    OrderDeposit,
+    /// <summary>
+    /// Vendor Managed Inventory (VMI) is a supply chain practice where the supplier is responsible for managing and replenishing inventory levels at the customer's location.
+    /// VMI aims to improve inventory turnover, reduce stockouts, and enhance overall supply chain efficiency by allowing the supplier to monitor inventory levels and make replenishment decisions based on real-time data.
+    /// </summary>
+    VendorManagedInventory,
+    /// <summary>
+    /// Target in-stock probability refers to the desired level of confidence that a product will be available in stock to meet customer demand at the time of purchase.
+    /// It is commonly used in vendor managed inventory (VMI) and other inventory management practices to set inventory levels and ensure that products are available to customers when they need them, while also minimizing excess inventory and associated costs.
+    /// </summary>
+    TargetInStockProbability,
+    /// <summary>
+    /// Point of Sale (POS) system is a computerized system used by retailers to manage sales transactions, inventory, and customer data at the point of purchase.
+    /// </summary>
+    PointOfSaleSystem,
+    /// <summary>
+    /// Automatic Replenishment System (ARS) is a system that automatically triggers the replenishment of inventory based on predefined rules, such as minimum stock levels or sales forecasts.
+    /// ARS helps to maintain optimal inventory levels, reduce stockouts, and improve overall supply chain efficiency by automating the replenishment process.
+    /// Also known as continuous replenishment system (CRS), it allows for real-time monitoring of inventory levels and demand patterns, enabling timely and accurate replenishment decisions to ensure that products are available to customers when they need them, while also minimizing excess inventory and associated costs.
+    /// </summary>
+    AutomaticReplenishmentSystem,
+    /// <summary>
+    /// Production smoothing refers to the practice of leveling production output to match demand patterns, often by producing at a consistent rate and using inventory as a buffer to absorb fluctuations in demand.
+    /// Production smoothing helps to reduce the impact of demand variability on production processes, minimize inventory costs, and improve overall supply chain efficiency by ensuring a more stable and predictable production schedule.
+    /// This approach can help to mitigate the effects of the bullwhip effect and other supply chain disruptions by maintaining a consistent production rhythm, allowing for better resource planning, and improving the ability to meet customer demand in a timely manner while minimizing waste and excess inventory.
+    /// </summary>
+    ProductionSmoothing,
+    /// <summary>
+    /// Double marginalization refers to the situation where multiple firms in a supply chain each add their own markup to the price of a product, leading to higher prices for consumers and reduced overall profitability for the supply chain.
+    /// This occurs when each firm in the supply chain operates independently and does not coordinate pricing strategies, resulting in a cumulative effect of markups that can significantly increase the final price of the product for consumers and reduce demand, ultimately leading to inefficiencies and suboptimal outcomes for all parties involved in the supply chain.
+    /// </summary>
+    DoubleMarginalization,
+    /// <summary>
+    /// Marginal cost pricing refers to the practice of setting prices based on the marginal cost of production, which is the additional cost incurred to produce one more unit of a product or service.
+    /// Marginal cost pricing can help to promote efficiency and competitiveness in the market by ensuring that prices reflect the true cost of production, allowing for more accurate pricing decisions and encouraging firms to produce at optimal levels to meet customer demand while minimizing waste and excess inventory.
+    /// By using marginal cost pricing, firms can avoid the pitfalls of double marginalization and other pricing strategies that may lead to higher prices for consumers and reduced demand, ultimately fostering a more efficient and competitive market environment.
+    /// </summary>
+    MarginalCostPricing
 }
