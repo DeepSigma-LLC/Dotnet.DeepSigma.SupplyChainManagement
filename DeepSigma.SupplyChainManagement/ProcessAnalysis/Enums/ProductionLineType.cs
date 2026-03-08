@@ -1,9 +1,9 @@
 ﻿namespace DeepSigma.SupplyChainManagement.ProcessAnalysis.Enums;
 
 /// <summary>
-/// Job Process Type is an enumeration that defines different types of manufacturing processes based on how production is organized and controlled.
+/// ProductionLineType specifies the different types of production lines that can be used in manufacturing processes, each with its own characteristics and advantages depending on the nature of the products being produced, the volume of production, and the level of customization required.
 /// </summary>
-public enum JobProcessType
+public enum ProductionLineType
 {
     /// <summary>
     /// Job shop is a manufacturing process in which a variety of custom products are made.

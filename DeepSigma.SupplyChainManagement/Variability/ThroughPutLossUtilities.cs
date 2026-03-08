@@ -38,5 +38,21 @@ internal class ThroughPutLossUtilities
         return b;
     }
 
+    /// <summary>
+    /// Calculates the effective throughput of the system based on the probability that all buffers are full and the
+    /// demand rate.
+    /// </summary>
+    /// <remarks>The throughput is determined by multiplying the demand rate by the probability that buffers
+    /// are not full. If the probability that all buffers are full is 1, the throughput will be zero. If it is 0, the
+    /// throughput equals the demand rate.</remarks>
+    /// <param name="probability_that_all_buffers_are_full">The probability that all buffers in the system are full. Must be a value between 0 and 1, inclusive.</param>
+    /// <param name="demand_rate">The expected number of requests per unit time for the system. Must be a non-negative value.</param>
+    /// <returns>The calculated throughput of the system as a decimal value, representing the rate at which the system can
+    /// process requests given the current buffer occupancy.</returns>
+    public static decimal ComputeThroughputOfSystem(decimal probability_that_all_buffers_are_full, decimal demand_rate)
+    {
+        decimal probability_that_buffers_are_empty = probability_that_all_buffers_are_full.Complement();
+        return probability_that_buffers_are_empty * demand_rate;
+    }
 
 }
