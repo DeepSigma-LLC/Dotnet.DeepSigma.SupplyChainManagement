@@ -544,5 +544,16 @@ public enum Terminology
     /// Marginal cost pricing can help to promote efficiency and competitiveness in the market by ensuring that prices reflect the true cost of production, allowing for more accurate pricing decisions and encouraging firms to produce at optimal levels to meet customer demand while minimizing waste and excess inventory.
     /// By using marginal cost pricing, firms can avoid the pitfalls of double marginalization and other pricing strategies that may lead to higher prices for consumers and reduced demand, ultimately fostering a more efficient and competitive market environment.
     /// </summary>
-    MarginalCostPricing
+    MarginalCostPricing,
+    /// <summary>
+    /// Buy back contract refers to an agreement between a supplier and a buyer where the supplier agrees to repurchase unsold inventory from the buyer at a predetermined price or under specific conditions.
+    /// Buy back contracts can help to mitigate the risks associated with demand uncertainty and inventory management by providing a safety net for buyers, allowing them to manage inventory levels more effectively and reduce the financial impact of unsold products, while also fostering collaboration and trust between suppliers and buyers in the supply chain.
+    /// However, buy back contracts can also lead to potential issues such as moral hazard, where buyers may be incentivized to overstock or not sell products in a timely manner, knowing that they can return unsold inventory to the supplier, which can create inefficiencies and challenges in managing inventory and demand across the supply chain.
+    /// </summary>
+    BuyBackContract,
+    /// <summary>
+    /// Bargining power refers to the ability of a party in a negotiation or business relationship to influence the terms and conditions of an agreement, often based on factors such as market position, size, resources, or alternatives available.
+    /// Bargaining power can play a significant role in shaping the dynamics of negotiations and business relationships, as parties with greater bargaining power may be able to secure more favorable terms, while those with less bargaining power may need to make concessions or accept less favorable conditions to reach an agreement.
+    /// </summary>
+    BarginingPower,
 }

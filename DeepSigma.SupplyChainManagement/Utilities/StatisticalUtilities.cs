@@ -44,6 +44,11 @@ public static class StatisticalUtilities
     /// </summary>
     /// <param name="upper_limit">The upper limit of the range.</param>
     /// <param name="lower_limit">The lower limit of the range.</param>
+    /// <param name="divisor">The divisor used to estimate the standard deviation from the range. Default is 4 for small sample sizes such as less than 20.
+    /// For larger sample sizes, a divisor of 6 is often used to provide a more accurate estimate of the standard deviation based on the range. 
+    /// The choice of divisor can depend on the specific context and the desired level of precision in the estimate. The divisor comes from the fact that for a normal distribution, approximately 95% of the data falls within 2 standard deviations of the mean, which corresponds to a range of 4 standard deviations (2 on each side of the mean). 
+    /// For larger sample sizes, using a divisor of 6 can provide a more accurate estimate of the standard deviation based on the range, as it accounts for the increased variability that can occur with larger samples.
+    /// </param>
     /// <returns>The estimated standard deviation based on the range.</returns>
-    public static decimal EstimateStandardDeviationFromRange(decimal upper_limit, decimal lower_limit) => (upper_limit - lower_limit) / 4;
+    public static decimal EstimateStandardDeviationFromRange(decimal upper_limit, decimal lower_limit, decimal divisor = 4) => (upper_limit - lower_limit) / divisor;
 }

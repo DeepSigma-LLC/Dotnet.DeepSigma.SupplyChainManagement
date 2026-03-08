@@ -20,6 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DeepSigma.General" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Assets\DeepSigma.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Pack>True</Pack>
