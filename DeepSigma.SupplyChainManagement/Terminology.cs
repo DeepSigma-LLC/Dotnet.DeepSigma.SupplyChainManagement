@@ -155,6 +155,11 @@ public enum Terminology
     /// </summary>
     HorizontalPooling,
     /// <summary>
+    /// Service level refers to the performance metric that measures the ability of a process or supply chain to meet customer demand and expectations in terms of product availability, delivery times, and overall customer satisfaction.
+    /// For example, a service level of 95% means that the process or supply chain is able to fulfill 95% of customer orders or demand within the specified time frame.
+    /// </summary>
+    ServiceLevel,
+    /// <summary>
     /// Lean operations is a systematic approach to identifying and eliminating waste in a process or supply chain, with the goal of improving efficiency, reducing costs, and enhancing customer value.
     /// It originated from the Toyota Production System (TPS) and has been widely adopted across various industries as a methodology for optimizing operations and achieving continuous improvement.
     /// Lean operations focuses on streamlining processes, minimizing inventory, reducing lead times, and maximizing value for customers by eliminating non-value-added activities and optimizing the flow of materials and information throughout the supply chain.
@@ -556,4 +561,16 @@ public enum Terminology
     /// Bargaining power can play a significant role in shaping the dynamics of negotiations and business relationships, as parties with greater bargaining power may be able to secure more favorable terms, while those with less bargaining power may need to make concessions or accept less favorable conditions to reach an agreement.
     /// </summary>
     BarginingPower,
+    MakeToStock,
+    MakeToOrder,
+    /// <summary>
+    /// Quick response refers to the ability of a supply chain or production system to rapidly respond to changes in demand or market conditions, often through the use of flexible manufacturing processes, efficient inventory management, and effective communication and coordination among supply chain partners.
+    /// Often associated with the concept of just-in-time (JIT) production, quick response can help to reduce lead times, minimize inventory costs, and improve overall supply chain efficiency by enabling companies to quickly adapt to changing customer needs and market dynamics, ultimately enhancing customer satisfaction and competitiveness in the market.
+    /// </summary>
+    QuickResponse,
+    /// <summary>
+    /// Reactive capacity refers to the ability of a supply chain or production system to quickly adjust its capacity in response to changes in demand or market conditions, often through the use of flexible manufacturing processes, scalable resources, and effective communication and coordination among supply chain partners.
+    /// Reactive capacity can help to improve supply chain resilience and agility by enabling companies to quickly ramp up or scale down production capacity as needed to meet changing customer demand and market dynamics, ultimately enhancing customer satisfaction and competitiveness in the market while also minimizing the risks associated with demand variability and supply chain disruptions.
+    /// </summary>
+    ReactiveCapacity,
 }
