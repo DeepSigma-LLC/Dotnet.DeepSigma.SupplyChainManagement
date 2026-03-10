@@ -573,4 +573,16 @@ public enum Terminology
     /// Reactive capacity can help to improve supply chain resilience and agility by enabling companies to quickly ramp up or scale down production capacity as needed to meet changing customer demand and market dynamics, ultimately enhancing customer satisfaction and competitiveness in the market while also minimizing the risks associated with demand variability and supply chain disruptions.
     /// </summary>
     ReactiveCapacity,
+    /// <summary>
+    /// Pooling refers to the practice of combining resources, such as inventory, production capacity, or demand, across multiple locations or entities in a supply chain to achieve economies of scale, reduce costs, and improve efficiency.
+    /// </summary>
+    Pooling,
+    /// <summary>
+    /// Lead time pooling refers to the practice of reducing lead times by consolidating shipments, delaying differentiation, or using other strategies to optimize the timing of production and distribution processes.
+    /// </summary>
+    LeadTimePooling,
+    /// <summary>
+    /// Universal design is also know as product pooling, it refers to the practice of designing products or services that can be used by a wide range of customers with varying needs and preferences, often by incorporating features and functionalities that are adaptable and inclusive.
+    /// </summary>
+    UniversalDesign
 }
