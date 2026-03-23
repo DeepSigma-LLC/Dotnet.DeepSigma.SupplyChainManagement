@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../DeepSigma.SupplyChainManagement.Test/DeepSigma.SupplyChainManagement.Test.csproj" Id="feaa450f-4ff0-4f8e-bb55-0713e4c2f1a9" />
   <Project Path="DeepSigma.SupplyChainManagement.csproj" />
 </Solution>

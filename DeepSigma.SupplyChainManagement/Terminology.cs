@@ -561,7 +561,13 @@ public enum Terminology
     /// Bargaining power can play a significant role in shaping the dynamics of negotiations and business relationships, as parties with greater bargaining power may be able to secure more favorable terms, while those with less bargaining power may need to make concessions or accept less favorable conditions to reach an agreement.
     /// </summary>
     BarginingPower,
+    /// <summary>
+    /// Make to stock refers to a production strategy where products are manufactured in anticipation of customer demand and held in inventory until they are sold.
+    /// </summary>
     MakeToStock,
+    /// <summary>
+    /// Make to order refers to a production strategy where products are manufactured only after a customer order is received, allowing for customization and reducing the need for inventory, but potentially leading to longer lead times compared to make to stock strategies.
+    /// </summary>
     MakeToOrder,
     /// <summary>
     /// Quick response refers to the ability of a supply chain or production system to rapidly respond to changes in demand or market conditions, often through the use of flexible manufacturing processes, efficient inventory management, and effective communication and coordination among supply chain partners.
