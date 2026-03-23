@@ -76,9 +76,41 @@ public static class OrderQuantityService
         return Math.Sqrt(intermediate);
     }
 
+    /// <summary>
+    /// Economic Order Quantity Cost Per Unit calculates the cost per unit of inventory based on the economic order quantity, setup cost, flow rate, and inventory holding cost. This calculation can help organizations evaluate the cost-effectiveness of their inventory management strategies by determining the cost per unit of inventory based on the optimal order quantity.
+    /// </summary>
+    /// <param name="setup_cost"></param>
+    /// <param name="flow_rate"></param>
+    /// <param name="inventory_holding_cost"></param>
+    /// <returns></returns>
     public static decimal EconomicOrderQuantityCostPerUnit(decimal setup_cost, decimal flow_rate, decimal inventory_holding_cost)
     {
         decimal intermediate = 2 * setup_cost * inventory_holding_cost * (1/flow_rate);
         return Math.Sqrt(intermediate);
+    }
+
+
+    /// <summary>
+    /// Inventory Costs Per Unit Of Time calculates the total inventory costs per unit of time based on the batch size and inventory cost. This calculation can help organizations understand the ongoing costs associated with holding inventory over time, allowing them to make informed decisions about inventory management and production strategies to minimize costs and improve efficiency.
+    /// </summary>
+    /// <param name="batch_size"></param>
+    /// <param name="inventory_cost"></param>
+    /// <returns></returns>
+    public static decimal InventoryCostsPerUnitOfTime(decimal batch_size, decimal inventory_cost)
+    {
+        return batch_size/2 * inventory_cost; // Average inventory is batch_size / 2, so we multiply by inventory cost to get the inventory cost per unit of time.
+    }
+
+    /// <summary>
+    /// Setup Costs Per Unit Of Time calculates the total setup costs per unit of time based on the setup cost, flow rate, and batch size. This calculation can help organizations understand the ongoing costs associated with setting up production processes over time, allowing them to make informed decisions about production strategies and batch sizes to minimize setup costs and improve efficiency.
+    /// </summary>
+    /// <param name="setup_cost"></param>
+    /// <param name="flow_rate"></param>
+    /// <param name="batch_size"></param>
+    /// <returns></returns>
+    public static decimal SetupCostsPerUnitOfTime(decimal setup_cost, decimal flow_rate, decimal batch_size)
+    {
+        // We have flow_rate / batch_size batches per unit of time, and each batch incurs a setup cost, so we multiply the number of batches per unit of time by the setup cost to get the setup cost per unit of time.
+        return setup_cost * (flow_rate / batch_size); 
     }
 }

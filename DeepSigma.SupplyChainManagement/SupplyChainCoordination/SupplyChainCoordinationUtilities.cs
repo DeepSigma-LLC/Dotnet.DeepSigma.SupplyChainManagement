@@ -26,6 +26,6 @@ public static class SupplyChainCoordinationUtilities
     /// <returns></returns>
     public static decimal BuyBackPriceToMaximizeSupplyChainTotalProfit(decimal price, decimal cost, decimal salvage_value,  decimal whole_sale_price, decimal shipping_cost)
     {
-        return shipping_cost + price + (price - whole_sale_price) * (price - salvage_value / (price - cost);
+        return shipping_cost + price + (price - whole_sale_price) * (price - salvage_value) / (price - cost);
     }
 }
