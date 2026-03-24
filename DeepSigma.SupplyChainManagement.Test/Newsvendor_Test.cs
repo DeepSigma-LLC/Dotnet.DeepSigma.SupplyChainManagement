@@ -19,7 +19,7 @@ public class Newsvendor_Test
             Price = 120,
             Cost = 40,
             SalvageValue = 20,
-            ActualDemand = 4000
+            ActualDemand = 4195.85m * 0.9m // 10% less than mean
         };
         Assert.Equal(0.8m, newsvendor.CriticalRatio);
         Assert.Equal(0.84m, newsvendor.CriticalRatio_ZScore, 2);
@@ -31,6 +31,22 @@ public class Newsvendor_Test
         Assert.Equal(newsvendor.Mean, newsvendor.ExpectedDemand);
         Assert.Equal(641m, newsvendor.ExpectedLeftoverInventory, 0);
 
+        Assert.Equal(343070.02m, newsvendor.ExpectedRevenue, 2);
+        Assert.Equal(114356.67m, newsvendor.ExpectedCostOfGoodsSold, 2);
+        Assert.Equal(12821.66m, newsvendor.ExpectedLossOnSalvage, 2);
+        Assert.Equal(127178.34m, newsvendor.TotalExpectedCost, 2);
+        Assert.Equal(215891.68m, newsvendor.ExpectedProfit, 2);
+        Assert.Equal(0.6029m, newsvendor.GetInstockProbability(3500), 4);
+        Assert.Equal(0.3971m, newsvendor.GetStockoutProbability(3500), 4);
 
+        decimal target_quantity = newsvendor.ComputeQuantityToTargetServiceLevel(0.99m);
+        Assert.Equal(5939.4m, target_quantity, 1);
+
+        Assert.Equal(newsvendor.Margin * newsvendor.ActualDemand, newsvendor.MaxProfit, 2);
+        Assert.Equal(39468.32m, newsvendor.MismatchCost, 2);
+
+        Assert.Equal(0.9m ,newsvendor.AFRatio, 2);
+        decimal calibrated_forecast = newsvendor.CalculateCalibratedForecast(3500);
+        Assert.Equal(3500m * 0.9m, calibrated_forecast, 1);
     }
 }
