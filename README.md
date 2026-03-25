@@ -1,7 +1,3 @@
-# SupplyChainManagement
-
-
-
 \# DeepSigma.SupplyChainManagement
 
 
