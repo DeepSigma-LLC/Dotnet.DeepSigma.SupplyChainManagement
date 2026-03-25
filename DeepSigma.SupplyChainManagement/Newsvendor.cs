@@ -48,7 +48,7 @@ public class Newsvendor
     public decimal MaxProfit => Margin * ActualDemand;
 
     /// <summary>
-    /// Selected value represents the order quantity chosen by users.
+    /// Selected value represents the order quantity chosen by users for analysis in the newsvendor model.
     /// </summary>
     public required decimal SelectedValue {  get; set; }
 
