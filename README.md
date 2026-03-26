@@ -6,49 +6,43 @@ This package is designed for analysts, engineers, and developers who want reusab
 
 ## Features
 
-* **Newsvendor modeling**
+- **Newsvendor modeling**
+  - Critical ratio
+  - Optimal order quantity
+  - Expected sales, leftover inventory, revenue, cost, and profit
+  - In-stock and stockout probabilities
+  - Quantity required to hit a target service level
+  - Forecast calibration via actual-to-forecast ratio
 
-  * Critical ratio
-  * Optimal order quantity
-  * Expected sales, leftover inventory, revenue, cost, and profit
-  * In-stock and stockout probabilities
-  * Quantity required to hit a target service level
-  * Forecast calibration via actual-to-forecast ratio
+- **Inventory management**
+  - Recommended batch size
+  - Economic order quantity (EOQ)
+  - EOQ cost
+  - Setup and inventory cost rate calculations
+  - Batch-size decisions based on process constraints
 
-* **Inventory management**
+- **Process analysis**
+  - Inventory, flow rate, and flow time calculations
+  - Capacity and bottleneck-oriented helpers
+  - Utilization and implied utilization
+  - Labor utilization
+  - Little’s Law helpers
+  - Capacity calculations with setup time and batch size
 
-  * Recommended batch size
-  * Economic order quantity (EOQ)
-  * EOQ cost
-  * Setup and inventory cost rate calculations
-  * Batch-size decisions based on process constraints
+- **Quality control**
+  - Process capability index (Cp)
+  - Defect probability
+  - Control limits
+  - Yield calculations
+  - Flow-unit requirements to hit a target yield
 
-* **Process analysis**
+- **Variability / queueing-style utilities**
+  - Approximate wait time calculations
+  - Throughput-loss style helpers
+  - Production-model selection support
 
-  * Inventory, flow rate, and flow time calculations
-  * Capacity and bottleneck-oriented helpers
-  * Utilization and implied utilization
-  * Labor utilization
-  * Little’s Law helpers
-  * Capacity calculations with setup time and batch size
-
-* **Quality control**
-
-  * Process capability index (Cp)
-  * Defect probability
-  * Control limits
-  * Yield calculations
-  * Flow-unit requirements to hit a target yield
-
-* **Variability / queueing-style utilities**
-
-  * Approximate wait time calculations
-  * Throughput-loss style helpers
-  * Production-model selection support
-
-* **Supply chain coordination**
-
-  * Buy-back price calculation for coordinating retailer/manufacturer incentives
+- **Supply chain coordination**
+  - Buy-back price calculation for coordinating retailer/manufacturer incentives
 
 ## Repository structure
 
@@ -63,24 +57,40 @@ DeepSigma.SupplyChainManagement/
 │   ├── Newsvendor.cs
 │   └── Terminology.cs
 └── DeepSigma.SupplyChainManagement.Test/    # xUnit test project
-````md
+```
 
-Target framework
+## Target framework
 
 This library currently targets:
 
-.NET 10
+- .NET 10
 
-Getting started
-Clone the repository
+## Getting started
+
+### Clone the repository
+
+```bash
 git clone https://github.com/DeepSigma-LLC/Dotnet.DeepSigma.SupplyChainManagement.git
 cd Dotnet.DeepSigma.SupplyChainManagement
-Build
+```
+
+### Build
+
+```bash
 dotnet build
-Run tests
+```
+
+### Run tests
+
+```bash
 dotnet test
-Usage
-Newsvendor example
+```
+
+## Usage
+
+### Newsvendor example
+
+```csharp
 using DeepSigma.SupplyChainManagement;
 
 var newsvendor = new Newsvendor
@@ -100,7 +110,11 @@ Console.WriteLine($"Critical Ratio: {newsvendor.CriticalRatio}");
 Console.WriteLine($"Optimal Quantity: {newsvendor.OptimalQuantity}");
 Console.WriteLine($"Expected Profit: {newsvendor.ExpectedProfit}");
 Console.WriteLine($"In-stock Probability: {newsvendor.GetInstockProbability(3500m)}");
-Inventory management example
+```
+
+### Inventory management example
+
+```csharp
 using DeepSigma.SupplyChainManagement.InventoryManagement;
 
 decimal setupCost = 300m;
@@ -110,7 +124,11 @@ decimal holdingCost = 0.006538m;
 decimal eoq = OrderQuantityService.EconomicOrderQuantity(setupCost, demandRate, holdingCost);
 
 Console.WriteLine($"EOQ: {eoq}");
-Process analysis example
+```
+
+### Process analysis example
+
+```csharp
 using DeepSigma.SupplyChainManagement.Utilities;
 
 decimal averageInventory = ProcessAnalysisUtilities.AverageInventory(
@@ -123,7 +141,11 @@ decimal utilization = ProcessAnalysisUtilities.ComputeUtilization(
 
 Console.WriteLine($"Average Inventory: {averageInventory}");
 Console.WriteLine($"Utilization: {utilization}");
-Quality control example
+```
+
+### Quality control example
+
+```csharp
 using DeepSigma.SupplyChainManagement.Utilities;
 
 decimal cp = QualityControlUtilities.ComputeProcessCapabilityIndex(
@@ -137,7 +159,11 @@ decimal ucl = QualityControlUtilities.UpperControlLimit(
 
 Console.WriteLine($"Cp: {cp}");
 Console.WriteLine($"Upper Control Limit: {ucl}");
-Supply chain coordination example
+```
+
+### Supply chain coordination example
+
+```csharp
 using DeepSigma.SupplyChainManagement.SupplyChainCoordination;
 
 decimal buyBackPrice =
@@ -149,36 +175,22 @@ decimal buyBackPrice =
         shipping_cost: 5m);
 
 Console.WriteLine($"Buy-back price: {buyBackPrice}");
-Tested components
+```
+
+## Tested components
 
 The current automated tests validate:
 
-Newsvendor
-OrderQuantityService
+- `Newsvendor`
+- `OrderQuantityService`
 
-This gives a solid starting point for the two most prominent inventory-focused components, but additional coverage would strengthen confidence in the rest of the library.
+## Design goals
 
-Design goals
-Keep formulas easy to consume from application code
-Provide supply chain and operations-management helpers with minimal setup
-Support teaching, prototyping, and operational analytics scenarios
-Favor plain C# models and static utilities over heavy framework abstractions
-Contributing
+- Keep formulas easy to consume from application code
+- Provide supply chain and operations-management helpers with minimal setup
+- Support teaching, prototyping, and operational analytics scenarios
+- Favor plain C# models and static utilities over heavy framework abstractions
 
-Contributions are welcome. Useful contributions include:
-
-More unit tests
-API cleanup and naming consistency
-Additional supply-chain formulas
-Documentation improvements
-Examples and tutorials
-
-To contribute:
-
-Fork the repository
-Create a feature branch
-Add or update tests
-Open a pull request
-License
+## License
 
 MIT License
