@@ -63,6 +63,7 @@ DeepSigma.SupplyChainManagement/
 │   ├── Newsvendor.cs
 │   └── Terminology.cs
 └── DeepSigma.SupplyChainManagement.Test/    # xUnit test project
+````md
 
 Target framework
 
